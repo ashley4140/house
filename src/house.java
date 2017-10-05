@@ -2,7 +2,7 @@ public class house {
     private String address;
     private String type;
     private double price;
-    private String owner;
+    private person owner;
 
     public String getAddress(){
         return address;
@@ -14,7 +14,7 @@ public class house {
         return price;
     }
 
-    public String getOwner() {
+    public person getOwner() {
         return owner;
     }
 
@@ -30,18 +30,22 @@ public class house {
         this.price = price;
     }
 
-    public void setOwner(String owner) {
+    public void setOwner(person owner) {
         this.owner = owner;
     }
+
     public house(){
-        this("No Address Specified", "No Type Specified", 0.0, "No owner specified");
+        this("No Address Specified", "No Type Specified", 0.0,new person());
     }
-    public house(String address,String type,double price,String owner){
+    public house(String address,String type,double price,person owner){
         setAddress(address);
         setType(type);
         setPrice(price);
         setOwner(owner);
     }
+
+
+
     @Override
     public String toString(){
         return new String ();
